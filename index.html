@@ -4,23 +4,35 @@
     <script src="https://cdn.jsdelivr.net/npm/web3@latest/dist/web3.min.js"></script>
     <script src="https://unpkg.com/moralis/dist/moralis.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   </head>
   <body>
-    <h1>I Own This NFT</h1>
+    
 
-    <button onclick="login()" id="btn-login">Connect Wallet</button>
-    <button onclick="logOut()" id="btn-logout">Disconnect</button>
+    <div class="text-center">
+      <h1>I Own This NFT</h1>
+      <br></br>
+      <br></br>
+      <button type="button" class="btn btn-success btn-lg"  onclick="login()" id="btn-login">Connect Wallet</button>
+      <button type="button" class="btn btn-danger btn-lg" onclick="logOut()" id="btn-logout">Disconnect</button> 
+      <br></br>
+      <p> Select one from the given options:
+        <select id="select1">
+            <option value="dadmfers">dadmsfers</option>
+            <option value="Sacred Skulls">Sacred Skulls</option>
+            <option value="BAYC">BAYC</option>
+        </select> 
+      </p> 
+      <br></br>
+      <button onclick="getNFTBalances()" id="btn-nft">Prove Ownership</button>
+    </div>
 
 
-    <p> Select one from the given options:
-      <select id="select1">
-          <option value="dadmfers">dadmsfers</option>
-          <option value="Sacred Skulls">Sacred Skulls</option>
-          <option value="BAYC">BAYC</option>
-      </select>
-    </p>
+    
 
-    <button onclick="getNFTBalances()" id="btn-nft">Prove Ownership</button>
+
+
+
      
     <script type="text/javascript">
     function getOption() {
