@@ -27,16 +27,18 @@ getNFTBalances = async () => {
       var resultObject = search(output, userEthNFTs);
       var nftOwner = typeof resultObject !== "undefined";
       if(nftOwner){
-        alert("You Own This NFT!");
+        // alert("You Own This NFT!");
         // testPull();
 
         // this below waits for the function to run and fulls the value
         // will probalby need this
         // I am tired and its time for a beer
-        shareCode = await testPull();
-        console.log(await testPull());
+        
+        shareCode = await testPull(output, shop);
+        console.log("printing sharcode from getBalance(): " + shareCode);
+        // console.log(await testPull());
       } else {
-        alert("You Dont Own This NFT");
+        // alert("You Dont Own This NFT");
         shareCode = "DENIED";
       }
         
@@ -49,7 +51,7 @@ getNFTBalances = async () => {
       // below is T/F
       // printFollowers(nftOwner);
       
-  return shareCode
+  return shareCode;
     // return nftOwner;
 }
 
